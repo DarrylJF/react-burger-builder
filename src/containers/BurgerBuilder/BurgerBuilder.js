@@ -75,6 +75,10 @@ class BurgerBuilder extends Component {
   purchaseHandler = () => {
     this.setState({purchasing: true});
   }
+
+  purchaseCnacelHandler = () => {
+    this.setState({purchasing: false})
+  }
   
   render() {
     // create copy of original state object to retain immutablity
@@ -89,7 +93,7 @@ class BurgerBuilder extends Component {
     console.log(disabledInfo);
     return (
       <Auxillary>
-        <Modal show={this.state.purchasing}>
+        <Modal show={this.state.purchasing} modalClose={this.purchaseCnacelHandler}>
           <OrderSummary ingredients={this.state.ingredients}/>
         </Modal>
         <Burger ingredients={this.state.ingredients}/>

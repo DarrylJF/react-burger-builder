@@ -1,9 +1,13 @@
 import React from 'react';
 import classes from './Modal.module.scss';
+import Auxillary from '../../../hoc/Auxillary';
+import Backdrop from '../Backdrop/Backdrop';
 
 const modal = (props) => {
   return (
-    <div 
+    <Auxillary>
+      <Backdrop show={props.show} clicked={props.modalClose}/>
+      <div 
       className={classes.Modal}
       style={{
         transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
@@ -11,6 +15,8 @@ const modal = (props) => {
       }}>
       {props.children}
     </div>
+    </Auxillary>
+    
   )
 };
 
