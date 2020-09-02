@@ -12,7 +12,7 @@ const orderSummary = (props) => {
     });
   return (
     <Auxillary>
-      <h3>Your Order</h3>
+      <h3><strong>Your Order</strong></h3>
       <p>Burger contains the following ingredients:</p>
       <ul>
         {ingredientSummary}
