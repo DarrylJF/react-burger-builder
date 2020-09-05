@@ -94,7 +94,6 @@ class BurgerBuilder extends Component {
       disabledInfo[key] = disabledInfo[key] <= 0
     }
     // disabledInfo {salad: true, meat: false, ...}
-    console.log(disabledInfo);
     return (
       <Auxillary>
         <Modal show={this.state.purchasing} modalClose={this.purchaseCancelHandler}>
